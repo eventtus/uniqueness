@@ -32,7 +32,7 @@ Adds random field support to Rails models.
 To auto-generate a new random string for field `foo`:
 
     class Example < ActiveRecord::Base
-      has_random_field :foo
+      has_unique_field :foo
     end
 
 You can customize the generated string by
