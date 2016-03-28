@@ -7,4 +7,4 @@ rvm:
 - jruby-19mode
 - rbx-2
 before_install:
-  - gem install bundler '~> 1.11'
+  - gem install bundler -v '~> 1.11'
