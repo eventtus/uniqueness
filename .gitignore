@@ -1,9 +1,23 @@
-/.bundle/
-/.yardoc
-/Gemfile.lock
-/_yardoc/
 /coverage/
-/doc/
+/InstalledFiles
 /pkg/
 /spec/reports/
+/test/tmp/
+/test/version_tmp/
 /tmp/
+/doc/
+/.config
+/Gemfile.lock
+*.gem
+*.rbc
+
+## Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+
+## Environment normalization:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
