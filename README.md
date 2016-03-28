@@ -1,5 +1,7 @@
 # Uniqueness
 
+[![Code Climate](https://codeclimate.com/github/owahab/uniqueness/badges/gpa.svg)](https://codeclimate.com/github/owahab/uniqueness)
+
 Rails recently introduced `has_secure_token` but it's very primitive.
 Meet the competition.
 
