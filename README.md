@@ -7,7 +7,7 @@
 Rails recently introduced `has_secure_token` but it's very primitive.
 Meet the competition.
 
-[Documentation](http://www.rubydoc.info/github/owahab/uniqueness)
+[Code Documentation](http://www.rubydoc.info/github/owahab/uniqueness)
 
 ## Installation
 
@@ -27,7 +27,22 @@ Or install it yourself as:
 
 ## Usage
 
+Adds random field support to Rails models.
 
+To auto-generate a new random string for field `foo`:
+
+    class Example < ActiveRecord::Base
+      has_random_field :foo
+    end
+
+You can customize the generated string by
+passing an options hash. The following keys are supported:
+
+`:length` number of characters, defaults to __32__
+
+`:type` type of string, defaults to __:hash__ and can be one of: `:human`, `:hash`
+
+`:blacklist` characters to exclude when generating the random string, defaults to __[]__
 
 ## Development
 
