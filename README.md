@@ -9,6 +9,13 @@ Meet the competition.
 
 [Code Documentation](http://www.rubydoc.info/github/owahab/uniqueness)
 
+## Requirements
+
+Minimum requirements are:
+
+1. Rails __4.0.0+__
+2. Ruby __2.0.0+__
+
 ## Installation
 
 Add this line to your application's Gemfile:
