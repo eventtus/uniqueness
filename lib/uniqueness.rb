@@ -1,0 +1,5 @@
+require 'rails/engine'
+require 'active_record'
+require 'uniqueness/version'
+require 'uniqueness/model'
+require 'uniqueness/engine'
