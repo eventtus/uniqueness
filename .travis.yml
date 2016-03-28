@@ -14,3 +14,5 @@ gemfile:
   - gemfiles/41.gemfile
   - gemfiles/42.gemfile
   - gemfiles/50.gemfile
+cache:
+  - bundler
