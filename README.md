@@ -5,6 +5,8 @@
 Rails recently introduced `has_secure_token` but it's very primitive.
 Meet the competition.
 
+[Documentation](http://www.rubydoc.info/github/owahab/uniqueness)
+
 ## Installation
 
 Add this line to your application's Gemfile:
