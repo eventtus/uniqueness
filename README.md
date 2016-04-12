@@ -3,6 +3,8 @@
 [![Code Climate](https://codeclimate.com/github/owahab/uniqueness/badges/gpa.svg)](https://codeclimate.com/github/owahab/uniqueness)
 [![Build Status](https://travis-ci.org/owahab/uniqueness.svg?branch=master)](https://travis-ci.org/owahab/uniqueness)
 [![Coverage Status](https://coveralls.io/repos/github/owahab/uniqueness/badge.svg?branch=master)](https://coveralls.io/github/owahab/uniqueness?branch=master)
+[![Inline docs](http://inch-ci.org/github/owahab/uniqueness.svg?branch=master)](http://inch-ci.org/github/owahab/uniqueness)
+[![security](https://hakiri.io/github/owahab/uniqueness/master.svg)](https://hakiri.io/github/owahab/uniqueness/master)
 
 Rails recently introduced `has_secure_token` but it's very primitive.
 Meet the competition.
