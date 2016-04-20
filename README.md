@@ -64,4 +64,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 Please see CONTRIBUTING.md for details.
 
 ## Credits
-recognition was originally written by Omar Abdel-Wahab.
+
+[![Eventtus](http://eventtus.com/css/images/logo.png)](http://eventtus.com)
+
+Project is sponsored by [Eventtus](http://eventtus.com).
