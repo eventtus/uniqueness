@@ -16,7 +16,7 @@ describe Uniqueness do
       it { expect(page.token.length).to eq 12 }
     end
 
-    context 'excludes ambigious characters from human field' do
+    context 'excludes ambigious characters from human field', focus: true do
       it { expect(page.short_code.split).not_to include page.uniqueness_ambigious_dictionary  }
     end
   end

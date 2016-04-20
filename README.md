@@ -49,9 +49,13 @@ passing an options hash. The following keys are supported:
 
 `:length` number of characters, defaults to __32__
 
-`:type` type of string, defaults to __:hash__ and can be one of: `:human`, `:hash`
+`:type` type of string, can be one of: `:human`, `:auto`, defaults to __:auto__
+
+Human type generates strings easier to read by excluding ambiguous characters like `1, 5, 8, B, o, O, I, l, s, u`.
 
 `:blacklist` characters to exclude when generating the random string, defaults to __[]__
+
+`:scope` scopes, defines the `ActiveRecord` `scope` applied before calculating the `position` field value. Defaults to __[]__
 
 ## Development
 
