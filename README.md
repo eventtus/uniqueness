@@ -1,15 +1,15 @@
 # Uniqueness
 
-[![Code Climate](https://codeclimate.com/github/owahab/uniqueness/badges/gpa.svg)](https://codeclimate.com/github/owahab/uniqueness)
-[![Build Status](https://travis-ci.org/owahab/uniqueness.svg?branch=master)](https://travis-ci.org/owahab/uniqueness)
-[![Coverage Status](https://coveralls.io/repos/github/owahab/uniqueness/badge.svg?branch=master)](https://coveralls.io/github/owahab/uniqueness?branch=master)
-[![Inline docs](http://inch-ci.org/github/owahab/uniqueness.svg?branch=master)](http://inch-ci.org/github/owahab/uniqueness)
-[![security](https://hakiri.io/github/owahab/uniqueness/master.svg)](https://hakiri.io/github/owahab/uniqueness/master)
+[![Code Climate](https://codeclimate.com/github/eventtus/uniqueness/badges/gpa.svg)](https://codeclimate.com/github/eventtus/uniqueness)
+[![Build Status](https://travis-ci.org/eventtus/uniqueness.svg?branch=master)](https://travis-ci.org/eventtus/uniqueness)
+[![Coverage Status](https://coveralls.io/repos/github/eventtus/uniqueness/badge.svg?branch=master)](https://coveralls.io/github/eventtus/uniqueness?branch=master)
+[![Inline docs](http://inch-ci.org/github/eventtus/uniqueness.svg?branch=master)](http://inch-ci.org/github/eventtus/uniqueness)
+[![security](https://hakiri.io/github/eventtus/uniqueness/master.svg)](https://hakiri.io/github/eventtus/uniqueness/master)
 
 Rails recently introduced `has_secure_token` but it's very primitive.
 Meet the competition.
 
-[Code Documentation](http://www.rubydoc.info/github/owahab/uniqueness)
+[Code Documentation](http://www.rubydoc.info/github/eventtus/uniqueness)
 
 ## Requirements
 
@@ -69,6 +69,6 @@ Please see CONTRIBUTING.md for details.
 
 ## Credits
 
-[![Eventtus](http://eventtus.com/css/images/logo.png)](http://eventtus.com)
+[![Eventtus](http://assets.eventtus.com/logos/eventtus/standard.png)](http://code.eventtus.com)
 
 Project is sponsored by [Eventtus](http://eventtus.com).
