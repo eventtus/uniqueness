@@ -69,6 +69,6 @@ Please see CONTRIBUTING.md for details.
 
 ## Credits
 
-[![Eventtus](http://assets.eventtus.com/logos/eventtus/standard.png)](http://code.eventtus.com)
+[![Eventtus](http://assets.eventtus.com/logos/eventtus/standard.png)](http://eventtus.com)
 
 Project is sponsored by [Eventtus](http://eventtus.com).
