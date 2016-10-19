@@ -67,7 +67,7 @@ module Uniqueness
     end
 
     def uniqueness_ambigious_dictionary
-      [:b, :B, :o, :O, :q, :I, :l, :L, :s, :S, :u, :U, :z, :Z].map(&:to_s)
+      [:b, :B, :o, :O, :q, :I, :l, :L, :s, :S, :u, :U, :z, :Z, :i, :g, 1, 9, 5].map(&:to_s)
     end
 
     def uniqueness_validation
