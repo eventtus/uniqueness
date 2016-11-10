@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['owahab@gmail.com']
 
   spec.summary       = 'Adds unique attribute support to ActiveModel models.'
-  spec.homepage      = 'http://github.com/owahab/uniqueness'
+  spec.homepage      = 'https://github.com/eventtus/uniqueness'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = 'exe'
