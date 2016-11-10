@@ -1,5 +1,6 @@
 # Uniqueness
 
+[![Gem Version](https://img.shields.io/gem/v/uniqueness.svg)](http://rubygems.org/gems/uniqueness)
 [![Build Status](https://travis-ci.org/eventtus/uniqueness.svg?branch=master)](https://travis-ci.org/eventtus/uniqueness)
 [![Code Climate](https://codeclimate.com/github/eventtus/uniqueness/badges/gpa.svg)](https://codeclimate.com/github/eventtus/uniqueness)
 [![Coverage Status](https://coveralls.io/repos/github/eventtus/uniqueness/badge.svg?branch=master)](https://coveralls.io/github/eventtus/uniqueness?branch=master)
