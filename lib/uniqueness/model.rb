@@ -11,7 +11,7 @@ module Uniqueness
       #
       # Examples:
       #   To auto-generate a new random string for field +foo+
-      #   has_random_field :foo
+      #   has_unique_field :foo
       #
       #   You can customize the generated string by
       #   passing an options hash. The following keys are supported:
