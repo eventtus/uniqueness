@@ -61,6 +61,10 @@ Human type generates strings easier to read by excluding ambiguous characters li
 
 `:scope` scopes, defines the `ActiveRecord` `scope` applied before calculating the `position` field value. Defaults to __[]__
 
+To generate a unique-random on the fly `Uniqueness.generate` that will produce a random field for you.
+
+You can also pass some options `Uniqueness.generate(type: :human)`.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
