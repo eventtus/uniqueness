@@ -31,19 +31,9 @@ module Uniqueness
       #            defaults to <tt>[]</tt>
       def has_unique_field(name, options = {})
         self.uniqueness_options ||= {}
-        self.uniqueness_options[name] = self.uniqueness_default_options.merge(options)
+        self.uniqueness_options[name] = Uniqueness.uniqueness_default_options.merge(options)
         before_validation :uniqueness_generate
         validate :uniqueness_validation
-      end
-
-      # Default sorting options
-      def uniqueness_default_options
-        {
-          length: 32,
-          type: :auto,
-          blacklist: [],
-          scope: []
-        }
       end
     end
 
@@ -52,22 +42,10 @@ module Uniqueness
       self.uniqueness_options.each do |field, options|
         value = send(field)
         unless value.present?
-          dict = uniqueness_dictionary - options[:blacklist]
-          dict -= [*(:A..:Z)].map(&:to_s) unless options[:case_sensitive]
-          dict -= uniqueness_ambigious_dictionary if options[:type].to_sym == :human
-          value = Array.new(options[:length]).map { dict[rand(dict.length)] }.join
+          value = Uniqueness.generate(options)
           self.send("#{field}=", value)
         end
       end
-    end
-
-    # Dictionary used for uniqueness generation
-    def uniqueness_dictionary
-      [*(:A..:Z), *(:a..:z), *(0..9)].map(&:to_s)
-    end
-
-    def uniqueness_ambigious_dictionary
-      [:b, :B, :o, :O, :q, :i, :I, :l, :L, :s, :S, :u, :U, :z, :Z, :g, 1, 2, 9, 5].map(&:to_s)
     end
 
     def uniqueness_validation
