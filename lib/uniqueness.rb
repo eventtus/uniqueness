@@ -1,5 +1,6 @@
 require 'rails/engine'
 require 'active_record'
 require 'uniqueness/version'
+require 'uniqueness/generator'
 require 'uniqueness/model'
 require 'uniqueness/engine'

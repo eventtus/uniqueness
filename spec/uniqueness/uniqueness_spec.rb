@@ -17,7 +17,7 @@ describe Uniqueness do
     end
 
     context 'excludes ambigious characters from human field', focus: true do
-      it { expect(page.short_code.split).not_to include page.uniqueness_ambigious_dictionary  }
+      it { expect(page.short_code.split).not_to include Uniqueness.uniqueness_ambigious_dictionary  }
     end
   end
   context 'update' do

@@ -5,6 +5,7 @@ Coveralls.wear!
 require 'rubygems'
 require 'rspec'
 require 'uniqueness'
+require 'uniqueness/generator'
 
 Bundler.require(:default)
 # Connect to database
