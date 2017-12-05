@@ -6,7 +6,9 @@ module Uniqueness
       dict = uniqueness_dictionary - options[:blacklist]
       dict -= [*(:A..:Z)].map(&:to_s) unless options[:case_sensitive]
       dict -= uniqueness_ambigious_dictionary if options[:type].to_sym == :human
-      Array.new(options[:length]).map { dict[rand(dict.length)] }.join
+      dict = uniqueness_numbers_dictionary if options[:type].to_sym == :numbers
+      code = Array.new(options[:length]).map { dict[rand(dict.length)] }.join
+      "#{options[:prefix]}#{code}#{options[:suffix]}"
     end
 
     # Dictionary used for uniqueness generation
@@ -18,13 +20,19 @@ module Uniqueness
       [:b, :B, :o, :O, :q, :i, :I, :l, :L, :s, :S, :u, :U, :z, :Z, :g, 1, 2, 9, 5].map(&:to_s)
     end
 
+    def uniqueness_numbers_dictionary
+      [*(0..9)].map(&:to_s)
+    end
+
     # Default sorting options
     def uniqueness_default_options
       {
         length: 32,
         type: :auto,
         blacklist: [],
-        scope: []
+        scope: [],
+        suffix: '',
+        prefix: ''
       }
     end
   end
