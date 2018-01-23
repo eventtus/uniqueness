@@ -3,6 +3,7 @@ require 'coveralls'
 Coveralls.wear!
 
 require 'rubygems'
+require 'pry'
 require 'rspec'
 require 'uniqueness'
 require 'uniqueness/generator'
@@ -19,7 +20,10 @@ load(File.join(File.dirname(__FILE__), 'schema.rb'))
 class Page < ActiveRecord::Base
   has_unique_field :uid
   has_unique_field :short_code, length: 9, type: :human
-  has_unique_field :token, length: 12, type: :url
+  has_unique_field :token, length: 12, type: :auto
+end
+
+class SubPage < Page
 end
 
 RSpec.configure do |config|

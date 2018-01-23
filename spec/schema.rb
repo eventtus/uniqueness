@@ -3,5 +3,6 @@ ActiveRecord::Schema.define version: 0 do
     t.string :uid
     t.string :short_code
     t.string :token
+    t.string :type
   end
 end

@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'sqlite3'
   spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'appraisal'
+  spec.add_development_dependency 'pry'
 
   spec.add_dependency 'activerecord', '>= 4.0.0'
   spec.add_dependency 'railties', '>= 4.0.0'
