@@ -1,3 +1,5 @@
+require 'securerandom'
+
 module Uniqueness
   class << self
     def generate(opts = {})
@@ -7,7 +9,7 @@ module Uniqueness
       dict -= [*(:A..:Z)].map(&:to_s) unless options[:case_sensitive]
       dict -= uniqueness_ambigious_dictionary if options[:type].to_sym == :human
       dict = uniqueness_numbers_dictionary if options[:type].to_sym == :numbers
-      code = Array.new(options[:length]).map { dict[rand(dict.length)] }.join
+      code = Array.new(options[:length]).map { dict[SecureRandom.random_number(dict.length)] }.join
       "#{options[:prefix]}#{code}#{options[:suffix]}"
     end
 
