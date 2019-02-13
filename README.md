@@ -65,6 +65,8 @@ To generate a unique-random on the fly `Uniqueness.generate` that will produce a
 
 You can also pass some options `Uniqueness.generate(type: :human)`.
 
+To regenerate a unique-random value with the same options `example.regenerate_foo`.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
