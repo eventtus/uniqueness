@@ -51,6 +51,7 @@ module Uniqueness
 
     def uniqueness_validation
       self.class.uniqueness_options.each do |field, options|
+        next unless new_record? || self.changes.has_key?(field)
         value = send(field)
         if value.nil?
           errors.add(field, 'should not be empty')

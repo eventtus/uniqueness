@@ -17,10 +17,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.license       = 'MIT'
 
-  spec.add_development_dependency 'bundler', '~> 1.11'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'bundler', '~> 2'
+  spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec'
-  spec.add_development_dependency 'sqlite3'
+  spec.add_development_dependency 'sqlite3', '~> 1.3', '< 1.4'
   spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'appraisal'
 

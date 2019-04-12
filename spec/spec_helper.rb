@@ -6,6 +6,7 @@ require 'rubygems'
 require 'rspec'
 require 'uniqueness'
 require 'uniqueness/generator'
+require 'bundler'
 
 Bundler.require(:default)
 # Connect to database

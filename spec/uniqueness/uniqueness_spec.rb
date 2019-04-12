@@ -16,7 +16,7 @@ describe Uniqueness do
       it { expect(page.token.length).to eq 12 }
     end
 
-    context 'excludes ambigious characters from human field' do
+    context 'excludes ambiguous characters from human field' do
       it { expect(page.short_code.split).not_to include Uniqueness.uniqueness_ambigious_dictionary  }
     end
   end
@@ -25,10 +25,10 @@ describe Uniqueness do
     it { expect(page.short_code).not_to be_nil }
     it { expect(page.token).not_to be_nil }
 
-    context 'does not overrite old value' do
+    context 'does not overwrite old value' do
       let(:old_uid) { page.uid }
       before do
-        page.save
+        page.save!
       end
       it { expect(page.uid).to eq old_uid }
     end
