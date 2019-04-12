@@ -1,21 +1,73 @@
 language: ruby
-rvm:
-- 2.6.0
-- 2.5.0
-- 2.4.0
-- 2.3.0
-before_install:
-  - gem install bundler -v '~> 2'
-gemfile:
-  - gemfiles/5.0.gemfile
-  - gemfiles/5.1.gemfile
-  - gemfiles/5.2.gemfile
-  - gemfiles/6.0.gemfile
+
+before_install: gem install bundler -v '~> 1.17'
+
 matrix:
-  exclude:
-    - rvm: 2.3.0
+  include:
+    # Rails 4.0
+    - rvm: 2.0.0
+      gemfile: gemfiles/4.0.gemfile
+    - rvm: 2.1.10
+      gemfile: gemfiles/4.0.gemfile
+    - rvm: 2.2.10
+      gemfile: gemfiles/4.0.gemfile
+
+    # Rails 4.1
+    - rvm: 2.0.0
+      gemfile: gemfiles/4.1.gemfile
+    - rvm: 2.1.10
+      gemfile: gemfiles/4.1.gemfile
+    - rvm: 2.2.10
+      gemfile: gemfiles/4.1.gemfile
+    - rvm: 2.3.8
+      gemfile: gemfiles/4.1.gemfile
+
+    # Rails 4.2
+    - rvm: 2.1.10
+      gemfile: gemfiles/4.2.gemfile
+    - rvm: 2.2.10
+      gemfile: gemfiles/4.2.gemfile
+    - rvm: 2.3.8
+      gemfile: gemfiles/4.2.gemfile
+    - rvm: 2.4.5
+      gemfile: gemfiles/4.2.gemfile
+
+    # Rails 5.0
+    - rvm: 2.3.8
+      gemfile: gemfiles/5.0.gemfile
+      before_install: gem install bundler -v '~> 2.0'
+    - rvm: 2.4.5
+      gemfile: gemfiles/5.0.gemfile
+      before_install: gem install bundler -v '~> 2.0'
+
+    # Rails 5.1
+    - rvm: 2.3.8
+      gemfile: gemfiles/5.1.gemfile
+      before_install: gem install bundler -v '~> 2.0'
+    - rvm: 2.4.5
+      gemfile: gemfiles/5.1.gemfile
+      before_install: gem install bundler -v '~> 2.0'
+    - rvm: 2.5.3
+      gemfile: gemfiles/5.1.gemfile
+      before_install: gem install bundler -v '~> 2.0'
+
+    # Rails 5.2
+    - rvm: 2.3.8
+      gemfile: gemfiles/5.2.gemfile
+      before_install: gem install bundler -v '~> 2.0'
+    - rvm: 2.4.5
+      gemfile: gemfiles/5.2.gemfile
+      before_install: gem install bundler -v '~> 2.0'
+    - rvm: 2.5.3
+      gemfile: gemfiles/5.2.gemfile
+      before_install: gem install bundler -v '~> 2.0'
+
+    # Rails 6.0
+    - rvm: 2.5.3
       gemfile: gemfiles/6.0.gemfile
-    - rvm: 2.4.0
+      before_install: gem install bundler -v '~> 2.0'
+    - rvm: 2.6.0
       gemfile: gemfiles/6.0.gemfile
+      before_install: gem install bundler -v '~> 2.0'
 cache:
   - bundler

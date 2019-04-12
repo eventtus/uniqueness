@@ -1,3 +1,3 @@
 module Uniqueness
-  VERSION = '0.8.1'.freeze
+  VERSION = '1.0.0'.freeze
 end
