@@ -34,6 +34,7 @@ module Uniqueness
         self.uniqueness_options[name] = Uniqueness.uniqueness_default_options.merge(options)
         before_validation :uniqueness_generate
         validate :uniqueness_validation
+        # TODO: we need to use update instead of update_attributes as it'll be depricated from rails 6.1
         define_method("regenerate_#{name}") { update_attributes(name => Uniqueness.generate(self.uniqueness_options[name])) }
       end
     end
