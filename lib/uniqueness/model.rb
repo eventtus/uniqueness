@@ -46,7 +46,7 @@ module Uniqueness
         end
 
         validate :uniqueness_validation
-        define_method("regenerate_#{name}") { self.update("#{name}": Uniqueness.generate(self.uniqueness_options[name])) }
+        define_method("regenerate_#{name}") { update(name => Uniqueness.generate(self.uniqueness_options[name])) }
       end
     end
 
