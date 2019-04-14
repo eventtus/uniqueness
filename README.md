@@ -51,6 +51,8 @@ To auto-generate a new random string for field `foo`:
 You can customize the generated string by
 passing an options hash. The following keys are supported:
 
+`:trigger_on` when to be generated, can be one of ActiveRecord callbacks (`before_validation`, `before_create`, `before_save`, `after_initialize`), default to __:before_validation__
+
 `:length` number of characters, defaults to __32__
 
 `:type` type of string, can be one of: `:human`, `:auto`, defaults to __:auto__

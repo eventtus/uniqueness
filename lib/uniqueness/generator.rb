@@ -34,7 +34,8 @@ module Uniqueness
         blacklist: [],
         scope: [],
         suffix: '',
-        prefix: ''
+        prefix: '',
+        trigger_on: :before_validation
       }
     end
   end
