@@ -16,6 +16,7 @@ module Uniqueness
       #   You can customize the generated string by
       #   passing an options hash. The following keys are supported:
       #
+      #   +:trigger_on+ when to be generated, can be one of ActiveRecord callbacks (<tt>before_validation</tt>, <tt>before_create</tt>, <tt>before_save</tt>, <tt>after_initialize</tt>), default to <tt>:before_validation</tt>
       #   +:length+ number of characters, defaults to <tt>32</tt>
       #
       #   +:case_sensitive+ defaults to <tt>true</tt>
@@ -32,10 +33,20 @@ module Uniqueness
       def has_unique_field(name, options = {})
         self.uniqueness_options ||= {}
         self.uniqueness_options[name] = Uniqueness.uniqueness_default_options.merge(options)
-        before_validation :uniqueness_generate
+
+        case options[:trigger_on]
+        when :before_create
+          before_create :uniqueness_generate
+        when :before_save
+          before_save :uniqueness_generate
+        when :after_initialize
+          after_initialize :uniqueness_generate
+        else
+          before_validation :uniqueness_generate
+        end
+
         validate :uniqueness_validation
-        # TODO: we need to use update instead of update_attributes as it'll be depricated from rails 6.1
-        define_method("regenerate_#{name}") { update_attributes(name => Uniqueness.generate(self.uniqueness_options[name])) }
+        define_method("regenerate_#{name}") { update(name => Uniqueness.generate(self.uniqueness_options[name])) }
       end
     end
 

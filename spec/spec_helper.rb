@@ -23,6 +23,10 @@ class Page < ActiveRecord::Base
   has_unique_field :token, length: 12, type: :url
 end
 
+class NewPage < ActiveRecord::Base
+  has_unique_field :after_init_token, trigger_on: :after_initialize
+end
+
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run focus: true
