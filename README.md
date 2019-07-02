@@ -55,7 +55,7 @@ passing an options hash. The following keys are supported:
 
 `:length` number of characters, defaults to __32__
 
-`:type` type of string, can be one of: `:human`, `number`, or `:auto` and defaults to __:auto__
+`:type` type of string, can be one of: `:human`, `:numbers`, or `:auto` and defaults to __:auto__
 
 Human type generates strings easier to read by excluding ambiguous characters like `1, 5, 8, B, o, O, I, l, s, u`.
 
