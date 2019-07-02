@@ -3,12 +3,12 @@ require 'securerandom'
 module Uniqueness
   class << self
     def generate(opts = {})
-      options ||= {}
       options = uniqueness_default_options.merge(opts)
       dict = uniqueness_dictionary - options[:blacklist]
       dict -= [*(:A..:Z)].map(&:to_s) unless options[:case_sensitive]
       dict -= uniqueness_ambigious_dictionary if options[:type].to_sym == :human
       dict = uniqueness_numbers_dictionary if options[:type].to_sym == :numbers
+      dict = uniqueness_custom_dictionary(options[:chars]) if options[:chars].present?
       code = Array.new(options[:length]).map { dict[SecureRandom.random_number(dict.length)] }.join
       "#{options[:prefix]}#{code}#{options[:suffix]}"
     end
@@ -24,6 +24,12 @@ module Uniqueness
 
     def uniqueness_numbers_dictionary
       [*(0..9)].map(&:to_s)
+    end
+
+    def uniqueness_custom_dictionary(chars = [])
+      chars = [*chars] if chars.is_a?(Range)
+      chars = chars.map(&:to_s) if chars.is_a?(Array)
+      chars
     end
 
     # Default sorting options
