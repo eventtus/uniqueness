@@ -2,11 +2,9 @@ appraise '40' do
   gem 'rails', '~> 4.0.0'
 end
 
-
 appraise '41' do
   gem 'rails', '~> 4.1.0'
 end
-
 
 appraise '42' do
   gem 'rails', '~> 4.2.0'
@@ -25,5 +23,5 @@ appraise '5.2' do
 end
 
 appraise '6.0' do
-  gem 'rails', '6.0.0.beta3'
+  gem 'rails', '~> 6.0.0'
 end

@@ -63,7 +63,7 @@ describe Uniqueness do
     end
   end
 
-  context 'intialized new object' do
+  context 'initialized new object' do
     it { expect(new_page.after_init_token).not_to be_nil }
 
     context 'length' do

@@ -55,13 +55,15 @@ passing an options hash. The following keys are supported:
 
 `:length` number of characters, defaults to __32__
 
-`:type` type of string, can be one of: `:human`, `:auto`, defaults to __:auto__
+`:type` type of string, can be one of: `:human`, `:numbers`, or `:auto` and defaults to __:auto__
 
 Human type generates strings easier to read by excluding ambiguous characters like `1, 5, 8, B, o, O, I, l, s, u`.
 
 `:blacklist` characters to exclude when generating the random string, defaults to __[]__
 
 `:scope` scopes, defines the `ActiveRecord` `scope` applied before calculating the `position` field value. Defaults to __[]__
+
+`:chars` Custom character list. If provided then `:type` will be ignored. `:chars` can be a range, an array of characters, or a string of characters.
 
 To generate a unique-random on the fly `Uniqueness.generate` that will produce a random field for you.
 
