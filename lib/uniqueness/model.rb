@@ -46,21 +46,17 @@ module Uniqueness
         end
 
         validate :uniqueness_validation
-
-        define_method("regenerate_#{name}") do
-          value = Uniqueness.generate(uniqueness_options[name])
-          send("#{name}=", value)
-        end
+        define_method("regenerate_#{name}") { update(name => Uniqueness.generate(self.uniqueness_options[name])) }
       end
     end
 
     # Generates a new code based on given options
     def uniqueness_generate
-      uniqueness_options.each do |field, options|
+      self.uniqueness_options.each do |field, options|
         value = send(field)
         unless value.present?
           value = Uniqueness.generate(options)
-          send("#{field}=", value)
+          self.send("#{field}=", value)
         end
       end
     end
