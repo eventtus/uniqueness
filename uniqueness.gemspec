@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.license       = 'MIT'
 
-  spec.add_development_dependency 'bundler', '~> 1.17'
+  spec.add_development_dependency 'bundler', '~> 1.17.1'
   spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'sqlite3', '~> 1.3', '< 1.4'
