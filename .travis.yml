@@ -1,6 +1,6 @@
 language: ruby
 
-before_install: gem install bundler -v '~> 1.17'
+before_install: gem install bundler -v '~> 1.17.1'
 
 matrix:
   include:
