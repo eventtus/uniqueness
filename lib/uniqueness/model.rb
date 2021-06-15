@@ -73,7 +73,7 @@ module Uniqueness
             conditions[s] = send(s)
           end
           conditions[field] = value
-          query = self.class.where(conditions)
+          query = self.class.unscoped.where(conditions)
           errors.add(field, 'should be unique') if query.any?
         end
       end
